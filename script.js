@@ -51,7 +51,7 @@ function currentPosition() {
       let lon = position.coords.longitude;
       let img = new Image();
 
-      img.src = "https://maps.googleapis.com/maps/api/staticmap?markers=size:large%7Ccolor:red%7C" + lat + "," + lon + "&zoom=13&sensor=true&size=1000x300";
+      img.src = "https://maps.googleapis.com/maps/api/staticmap?markers=size:large%7Ccolor:red%7C" + lat + "," + lon + "&zoom=13&sensor=true&size=1000x300&key=AIzaSyBn7aVoJ5DG6o1oYaDdc8XAsApqlAtHaTg";
       showMap.append(img);
   }
   function error() {

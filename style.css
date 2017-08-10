@@ -51,12 +51,7 @@ h1 {
 ::-webkit-input-placeholder {
   color: #124677;
 }
-.name {
-  float: left;
-}
-. name input {
-  width: 40%;
-}
+
 #last-name, #email {
   margin: 4% 0;
 }
