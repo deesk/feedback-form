@@ -1,25 +1,18 @@
-console.log('helloWorld');
-const errMsg = $(".err-msg");
-errMsg.hide();
-currentPosition();
 
-const firstName = $("#first-name input");
+$( document ).ready(function() {
+    currentPosition();
+});
+
+const  firstName = $("#first-name input");
 const lastName = $("#last-name input");
 const email = $("#email input");
 const feedback = $("#feedback textarea")
+const errMsg = $(".err-msg");
 
+errMsg.hide();
 $("button").click(validate);
 
-
-// Error message display to validate input fields
-// TODO animation frm up t down dispalay error message
-// TODO REMOVE all console.log and todos at end
-// TODO MAKE POP UP BLOCK FOR THANK YOU...IF U have extra time..
-// TODO font aswome icon for f and l name and email
-// TODO verify name and email address
-// TODO load map on doc load
-
-// basic input valitation
+// user input valitation function
 function validate() {
   errMsg.css('background', 'red')
   let emailReg = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
@@ -38,16 +31,15 @@ function validate() {
     errMsg.text("Please Enter Feedback");
     errMsg.show();
   } else {
-    errMsg.text("Thank You for your Feedback!!");
     errMsg.css('background', 'green')
+    errMsg.text("Thank You for your Feedback!!");
     firstName.val("");
     lastName.val("");
     email.val("");
     feedback.val("");
   }
 }
-
-// Current Position
+// current Position
 function currentPosition() {
   let showMap = $("#map");
   if(!navigator.geolocation) {

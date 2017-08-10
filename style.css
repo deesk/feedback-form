@@ -1,12 +1,14 @@
 
   /*// Global */
+@import url('https://fonts.googleapis.com/css?family=Volkhov');
+
 * {
   box-sizing: border-box;
+  font-family: 'Volkhov', serif;
 }
 body {
   width: 100%;
   text-align: center;
-  /*background: linear-gradient(to bottom, black 0%,black 50%,#000000 20%,#66c3ee 50%,#66c3ee 100%);*/
   background: #66c3ee;
 }
 .outer-wrapper {
@@ -47,6 +49,9 @@ h1 {
   margin: 0 0 2% 0;
 }
  /*Input Text*/
+::-webkit-input-placeholder {
+  color: #124677;
+}
 #last-name, #email {
   margin: 4% 0;
 }
@@ -61,6 +66,12 @@ input, textarea {
 }
 #feedback textarea {
   height: 120px;
+}
+input:focus,
+textarea:focus {
+  -webkit-box-shadow: -1px 2px 24px 2px rgba(18,70,119,0.75);
+  -moz-box-shadow: -1px 2px 24px 2px rgba(18,70,119,0.75);
+  box-shadow: -1px 2px 24px 2px rgba(18,70,119,0.75);
 }
  /*// Submit Button */
 button {
@@ -82,15 +93,21 @@ button:hover {
 
 /* Media Queries
 ------------------ */
+@media (max-width: 500px){
+  .err-msg, #map p {
+    font-size: 1em;
+  }
+}
+
 @media (max-width: 1100px){
   .outer-wrapper {
     width: 70%;
   }
   h1 {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
-  .err-msg {
-    font-size: 1em;
+  .err-msg, #map p {
+    font-size: 1.3em;
   }
   input, textarea {
     font-size: 1em;
@@ -101,4 +118,5 @@ button:hover {
   #map img {
     width: 99%;
   }
+
 }
