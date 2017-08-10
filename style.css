@@ -13,7 +13,7 @@ body {
 .outer-wrapper {
   margin: 5% auto 5% auto;
   border: 1px solid black;
-  width: 40%;
+  width: 50%;
   -webkit-box-shadow: 0px 2px 24px 2px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 2px 24px 2px rgba(0,0,0,0.75);
   box-shadow: 0px 2px 24px 2px rgba(0,0,0,0.75);}
@@ -34,16 +34,16 @@ body {
 h1 {
   margin: 2% 0 4% 0;
   color: #124677;
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
 .err-msg, #map p {
   display: inline-block;
   font-weight: 700;
-  font-size: 1.3em;
+  font-size: 1.2em;
   text-align: left;
   width: 100%;
   background: red;
-  padding: 2%;
+  padding: 1%;
   color: white;
   margin: 0 0 2% 0;
 }
@@ -51,14 +51,20 @@ h1 {
 ::-webkit-input-placeholder {
   color: #124677;
 }
+.name {
+  float: left;
+}
+. name input {
+  width: 40%;
+}
 #last-name, #email {
   margin: 4% 0;
 }
 input, textarea {
   display: block;
-  font-size: 1.2em;
+  font-size: 1em;
   width: 100%;
-  padding: 2%;
+  padding: 1%;
   font-weight: 700;
   color: #124677;
   border: 2px solid #124677;
@@ -96,14 +102,6 @@ button:hover {
 
 /* Media Queries
 ------------------ */
-@media (max-width: 500px){
-  .outer-wrapper {
-    width: 90%;
-  }
-  .err-msg, #map p {
-    font-size: 1em;
-  }
-}
 
 @media (max-width: 1100px){
   .outer-wrapper {
@@ -113,12 +111,21 @@ button:hover {
     font-size: 1.4em;
   }
   .err-msg, #map p {
-    font-size: 1.3em;
+    font-size: 1em;
   }
   input, textarea {
     font-size: 1em;
   }
   button {
     width: 40%;
+  }
+}
+@media (max-width: 500px){
+  .outer-wrapper {
+    width: 90%;
+  }
+  .err-msg, #map p {
+    font-size: 0.8em;
+    background: blue;
   }
 }
